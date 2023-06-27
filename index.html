@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Scripts para insersão de ícones -->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+    <!-- Scripts do JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <!-- Folha de estilos -->
+    <link rel="stylesheet" href="./styles/style-1.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- Scripts de comunicação com a base de dados -->
+    <script src="./scripts/front-end.js"></script>
+
+    <title>Cadastro de novos clientes</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><span onclick="vaiCadastro()" id="span-cadastro">Cadastro</span></li>
+            <li><span onclick="vaiLista()" id="span-lista">Listagem</span></li>
+            <!--<li><span onclick="vaiSobre()">Sobre</span></li>-->
+        </ul>
+    </div>
+    <div class="container" id="cadastro">
+        <form class="form-content">
+            <div class="form-header">
+                <img src="./img/logo.jpg" alt="logo">
+                <h1>Cadastro de novos clientes</h1>
+                <p>Informe os dados pessoais para cadastrar o novo cliente.</p>
+            </div>
+            <div class="form-input">
+                <div class="input">
+                    <input type="text" id="nome" placeholder=" ">
+                    <div class="label">
+                        <label for="nome">nome</label>
+                    </div>
+                </div>
+                <div class="input">
+                    <input type="text" id="cpf" placeholder=" ">
+                    <div class="label">
+                        <label for="cpf">cpf</label>
+                    </div>
+                </div>
+                <div class="input">
+                    <input type="text" id="celular" placeholder=" ">
+                    <div class="label">
+                        <label for="celular">celular</label>
+                    </div>
+                </div>
+                <div class="input">
+                    <input type="email" id="email" placeholder=" ">
+                    <div class="label">
+                        <label for="email">email</label>
+                    </div>
+                </div>
+                <div class="bt">
+                    <input type="button" id="salvar" onclick="novoCliente()" value="Salvar"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container" id="lista" style="display: none;">
+        <div class="list-content">
+            <div class="list-header">
+                <h1>Lista de clientes cadastrados</h1>
+            </div>
+            <div class="lista">
+                <table class="tbl-clientes" id="tbl-clientes">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cpf</th>
+                        <th>Celular</th>
+                        <th>Email</th>
+                        <th><img src="./img/trash.png" width="20px"
+                            height="auto"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+       $("#celular").mask("(00) 00000-0000");
+       $("#cpf").mask("000.000.000-00");
+    </script>
+</body>
+ <html>
+     <!--
+    <div style="padding: 20px;">
+        <p style="font-size: 10px;" style="position: absolute; margin-top: 100vh;"><a href="https://br.freepik.com/fotos-gratis/apresentacao-do-produto-spa-pedestal-de-lajes-de-marmore-e-galhos-imagem-gerada-por-ia_43066208.htm#query=produtos&position=3&from_view=search&track=sph">Imagem de WangXiNa</a> no Freepik</p>
+    </div>
+-->
