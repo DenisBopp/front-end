@@ -59,7 +59,7 @@ display: block;
 text-align: center;
 padding: 8px;
 backdrop-filter: blur(16px);
-text-transform: capitalize;
+text-transform: uppercase;
 }
 
 li #span-cadastro{
