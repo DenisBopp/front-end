@@ -1,0 +1,272 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+:root{
+--color-0: #6c3483;
+--color-1: #8e44ad;
+--color-2: #f1948a;
+--color-3: #c39bd3;
+--color-4: #85c1e9;
+--color-5: #73c6b6;
+--color-6: #82e0aa;
+}
+*{
+margin: 0;
+padding: 0;
+vertical-align: baseline;
+list-style: none;
+box-sizing: border-box;
+font-family: "Raleway", sans-serif;
+}
+
+body{
+height: 100vh;
+display: flex;
+flex-direction: column;
+place-items: center;
+font-weight: 500;
+padding: 0 24px  ;
+background-image: url("../img/background-3.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.navbar{
+margin-top: 1.5%;
+}
+
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+width: 100%;
+border-radius: 8px;
+font-size: 18px;
+font-weight: 900;
+box-shadow: 0 5px 10px -3px rgb(0 0 0 /.8), 0 4px 6px -4px rgb(0 0 0 /.8);
+background: transparent;
+}
+
+li, span{
+float: left;
+display: block;
+color: #0f0f0f;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+background: transparent;
+backdrop-filter: blur(20px);
+}
+
+li #span-cadastro{
+text-decoration: underline;
+}
+
+li span:hover{
+color: var(--color-0);/* rebeccapurple;*/
+cursor: pointer;
+}
+/*
+li #span-cadastro{
+/*color: var(--color-1);
+}
+
+li span #lista:active ~ li span #cadastro{
+color: blue;
+}
+*/
+
+.container{
+margin-top: 1.5%;
+display: flex;
+flex-direction: column;
+width: 600px;
+height: auto;
+box-shadow: 0 10px 15px -3px rgb(0 0 0 /.8), 0 4px 6px -4px rgb(0 0 0 /.8);
+border-radius: 12px;
+border: 2px solid  rgba( 255,255,255, .5);
+background: transparent;
+opacity: 0.75;
+backdrop-filter: blur(20px);
+min-width: 500px;
+transition: 300ms ease;
+}
+
+.form-content, .list-content{
+display: flex;
+flex-direction: column;
+/*align-items: center;*/
+padding: 24px;
+
+}
+
+.form-header{
+text-align: center;
+margin-bottom: 40px;
+}
+
+.list-header{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.form-header h1{
+font-size: 28px;
+}
+
+.list-header h1{
+font-size: 28px;
+padding-top: 10px;
+}
+
+.form-header p {
+font-size: 14px;
+}
+
+.form-header img{
+height: auto;
+width: 350px;
+padding: 10px;
+}
+
+.form-input{
+display: flex;
+flex-direction: column;
+gap: 40px;
+width: 100%;
+}
+
+/* Tabela de clientes cadastrados */
+.lista{
+width: auto;
+display: flex;
+flex-direction: column;
+width: 100%;
+}
+
+.lista table{
+border-radius: 8px;
+border-collapse: collapse;
+overflow: hidden;
+background-color: #f0f0f0;
+}
+
+.lista th, td{
+padding: 4px 6px;
+text-align: left;
+border-bottom: 1px solid #DCC7CA;
+
+}
+
+.lista td:nth-child(5), .lista td:nth-child(5) span{
+text-align: center;
+
+}
+
+.lista span{
+height: 6px;
+font-size: 12px;
+background-color: #f0f0f0; 
+cursor: pointer;
+}
+
+.lista span:hover{
+color: red;
+font-weight: bolder;
+}
+
+.lista th img{
+position: relative;
+top: 2px;
+right: -6px;
+}
+
+/*----------------------------------*/
+
+.input{
+display: flex;
+flex-direction: column;
+position: relative;
+
+}
+
+.input input{
+width: 100%;
+padding: 8px 8px;
+border: none;
+border-bottom: 1px solid rebeccapurple;
+font-size: 16px;
+font-weight: 900;
+transition: 300ms ease;
+background: transparent;
+}
+
+.input input:focus{
+outline: none;
+box-shadow: 0 1px 0 0 rebeccapurple;
+border-color: rebeccapurple;
+}
+
+.label {
+display: flex;
+align-items: center;
+height: 100%;
+position: absolute;
+transition: 300ms ease;
+}
+
+.label label{
+display: block;
+font-size: 16px;
+color: #201d1d;
+}
+
+.input input:focus + .label,
+.input input:not(:placeholder-shown) + .label {
+transform: translateY(-27px);
+
+}
+
+.input input:focus + .label label,
+.input input:not(:placeholder-shown) + .label label{
+font-weight: 600;
+color: initial;
+
+}
+
+.bt{
+display: flex;
+flex-direction: column;
+}
+
+input[type=button]{
+padding: 12px 18px;
+border: 1px solid rgb(200, 200, 200);
+align-self: center;
+background-color: rgb(247, 204, 211);
+border-radius: 8px;
+transition: 300ms ease;
+font-size: 16px;
+font-weight: 900;
+width: 150px;
+margin: auto;
+box-shadow: 0 7px 10px -3px rgb(0 0 0 /.8), 0 4px 6px -4px rgb(0 0 0 /.8);
+}
+
+input[type=button]:focus{
+outline: none;
+}
+
+input[type=button]:hover{
+background-color: rgb(250, 190, 200);
+text-decoration: underline;
+text-decoration-color: #6c3483;
+cursor: pointer;
+}
+
+input[type=button]:active{
+background-color: #808070;
+transition: 100ms ease;
+}
