@@ -15,4 +15,4 @@ Esta aplicação tem por objetivo a manutenção do cadastro de clientes da loja
 Para Utilização das funcionalidades, deve-se rodar o servidor de back-end, depois disto basta acessar
 o arquivo html [http://index.html](index.html) para executar as funcionalidades. A aplicação está configurada
 para rodar na porta 8000, se houver conflito com alguma outra aplicação, troque a porta no endereçamento das rotas
-no index.html e no comando de execução do Flask.
+no front-end.js e no comando de execução do Flask.
